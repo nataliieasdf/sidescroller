@@ -13,11 +13,11 @@ $(document).ready(function(e){
 	$(window).on('scroll',function(e){
 		//num px scrolled down the browser
 		var px = $(window).scrollTop(); 
+		console.log(px);
+		var move = 0 - px
 
-
-		$('.hills').css('left', '-' + px );
+		$('.hills').css('left', (move) );
 
 	});
-
 
 });
