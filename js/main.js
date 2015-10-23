@@ -4,11 +4,11 @@ $(document).ready(function(e){
 	var winW = $(window).width();
 	console.log(winH, winW);
 
-	var remainingW = $('.hills').width() - winH;
+	var remainingW = $('.hills').width() - winW;
 
-	$('img').after('<div></div>');
+	//$('img').after('<div></div>');
 
-	$('div').css('height', remainingW)
+	$('body').css('height', remainingW+winH)
 
 	$(window).on('scroll',function(e){
 		//num px scrolled down the browser
@@ -20,4 +20,4 @@ $(document).ready(function(e){
 
 	});
 
-});
+});  
