@@ -1,14 +1,21 @@
 $(document).ready(function(e){
 
 	var winH = $(window).height();
-	console.log(winH);
+	var winW = $(window).width();
+	console.log(winH, winW);
 
+	var remainingW = $('.hills').width() - winH;
 
-	$(window).on('click',function(e){
+	$('img').after('<div></div>');
+
+	$('div').css('height', remainingW)
+
+	$(window).on('scroll',function(e){
 		//num px scrolled down the browser
 		var px = $(window).scrollTop(); 
 
-		$('.hills').css('left', '-850px');
+
+		$('.hills').css('left', '-' + px );
 
 	});
 
